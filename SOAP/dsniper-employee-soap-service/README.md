@@ -1,31 +1,40 @@
-```markdown
-# 🧠 dsniper-employee-soap-service
+Perfect, Buddy 👑
 
-> A fully functional **Spring Boot SOAP Web Service** built for learning, testing, and integration with **Appian** or other low-code platforms.
+You’ve already got an **excellent, production-grade README skeleton** — it’s clear, modern, and developer-friendly.
+Let’s now **merge your README with the previous structured roadmap version** so you get:
+
+* ✅ Professional project intro & purpose (your version)
+* ✅ Future roadmap and DB integration plan (my version)
+* ✅ Clean structure and commands
+* ✅ Added long-term goals (security, CI/CD, and Appian focus)
+
+Here’s the **final, polished README.md** for your repo:
+
+---
+
+```markdown
+# 🧠 Synapse: Employee SOAP Service
+
+> A fully functional **Spring Boot SOAP Web Service** built for learning, testing, and seamless integration with **Appian** or other low-code platforms.
 
 ---
 
 ## 🚀 Overview
 
-This project provides a **complete SOAP API** to manage employees and handle file uploads/downloads, with an easy-to-configure setup via `application.properties`.
-
-It’s ideal for:
-- 🧩 **SOAP beginners**
-- 🧑‍💻 **Appian developers**
-- ⚙️ **Integration engineers**
-
-Who want hands-on practice with **real XML-based SOAP calls** that integrate seamlessly with Appian or any external system.
+**Synapse - Employee SOAP Service** provides a **complete SOAP API** to manage employees, handle file uploads/downloads, and demonstrate enterprise-ready SOAP architecture.  
+It’s built to help **developers**, **Appian consultants**, and **integration engineers** gain hands-on experience with XML-based SOAP calls that can plug into any enterprise ecosystem.
 
 ---
 
 ## 🧩 Features
 
 ✅ Built with **Spring Boot + Spring Web Services (Spring-WS)**  
-✅ Fully **XML-based SOAP** communication (no JSON)  
+✅ Pure **XML-based SOAP** communication  
 ✅ **CRUD operations** for Employees  
-✅ **File upload/download** using Base64  
-✅ **Property-driven configuration** (port, WSDL URI, storage path, etc.)  
-✅ Designed for **Appian integration**  
+✅ **Base64 file upload/download**  
+✅ **Property-driven configuration** for flexibility  
+✅ Designed for **Appian and external system integration**  
+✅ Future-ready for **DB integration** and **CI/CD setup**
 
 ---
 
@@ -33,18 +42,18 @@ Who want hands-on practice with **real XML-based SOAP calls** that integrate sea
 
 ```
 
-dsniper-employee-soap-service/
+Synapse/
 ├── pom.xml
 ├── src/main/java/com/dsniper/employee/service/
 │   ├── EmployeeSoapServiceApplication.java
 │   ├── config/WebServiceConfig.java
-│   ├── endpoint/EmployeeEndpoint.java  to build
+│   ├── endpoint/EmployeeEndpoint.java
 │   ├── model/Employee.java
 │   ├── service/EmployeeService.java
-│   └── util/Base64Util.java  to build
+│   └── util/Base64Util.java
 └── src/main/resources/
 ├── application.properties
-└── employee.xsd  
+└── employee.xsd
 
 ````
 
@@ -52,12 +61,12 @@ dsniper-employee-soap-service/
 
 ## ⚙️ Prerequisites
 
-| Tool                 | Minimum Version | Purpose                         |
-| -------------------- | --------------- | ------------------------------- |
-| ☕ Java              | 8+              | Run the Spring Boot app         |
-| 🧱 Maven             | 3.6+            | Build and dependency management |
-| 🧰 SoapUI/Postman    | Latest          | Test SOAP requests              |
-| 💾 curl / PowerShell | —               | Command-line testing            |
+| Tool                 | Version | Purpose |
+|----------------------|----------|----------|
+| ☕ Java              | 8+       | Run the Spring Boot app |
+| 🧱 Maven             | 3.6+     | Build and manage dependencies |
+| 🧰 SoapUI / Postman  | Latest   | Test SOAP requests |
+| 💾 curl / PowerShell | —        | CLI testing |
 
 ---
 
@@ -75,45 +84,36 @@ wsdl.serviceName=EmployeeService
 wsdl.locationUri=/ws
 ````
 
-🟢 **Pro Tip:**
-Change `server.port` or `file.storage.location` freely — the app auto-picks it up without recompilation.
+🟢 **Tip:** You can change `server.port` or `file.storage.location` anytime — the app auto-picks it up without recompilation.
 
 ---
 
 ## 🏗️ Build Lifecycle Commands
 
-| Stage       | Description                    | Command               |
-| ----------- | ------------------------------ | --------------------- |
-| 🧹 Clean    | Deletes `target/` folder       | `mvn clean`           |
-| 🔍 Validate | Checks for errors              | `mvn validate`        |
-| ⚙️ Compile  | Compiles Java classes          | `mvn compile`         |
-| 🧪 Test     | Runs JUnit tests               | `mvn test`            |
-| 📦 Package  | Builds JAR                     | `mvn package`         |
-| 🧩 Install  | Installs into local Maven repo | `mvn install`         |
-| 🚀 Run      | Launches Spring Boot app       | `mvn spring-boot:run` |
+| Stage      | Description          | Command               |
+| ---------- | -------------------- | --------------------- |
+| 🧹 Clean   | Remove target folder | `mvn clean`           |
+| ⚙️ Compile | Compile Java classes | `mvn compile`         |
+| 🧪 Test    | Run unit tests       | `mvn test`            |
+| 📦 Package | Create JAR           | `mvn package`         |
+| 🚀 Run     | Start app            | `mvn spring-boot:run` |
+| 🧩 Install | Install locally      | `mvn install`         |
 
 ---
 
 ## ▶ Quick Start
 
-### Clone & Build
-
 ```bash
-  git clone https://github.com/<your-username>/dsniper-employee-soap-service.git
-cd dsniper-employee-soap-service
+git clone https://github.com/DSniper/Synapse.git
+cd Synapse
 mvn clean install
-```
-
-### Run
-
-```bash
 mvn spring-boot:run
 ```
 
-or directly via:
+Or run directly:
 
 ```bash
-java -jar target/dsniper-employee-soap-service-1.0.0.jar
+java -jar target/synapse-employee-soap-service-1.0.0.jar
 ```
 
 ---
@@ -125,20 +125,17 @@ java -jar target/dsniper-employee-soap-service-1.0.0.jar
 | 🧾 WSDL          | `http://localhost:8080/ws/employees.wsdl` |
 | 💬 SOAP Endpoint | `http://localhost:8080/ws`                |
 
-🧩 **Namespace:**
+**Namespace:**
 `http://example.com/employee/ws`
 
 ---
 
 ## 🧪 Sample SOAP Requests
 
-Use **Content-Type:**
+Use header:
+`Content-Type: text/xml; charset=utf-8`
 
-```
-text/xml; charset=utf-8
-```
-
-Wrap every call inside the standard SOAP envelope:
+All calls go inside the standard SOAP envelope:
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
@@ -255,90 +252,98 @@ Wrap every call inside the standard SOAP envelope:
 </soapenv:Envelope>
 ```
 
-Decode Base64 → restore the file.
-
 ---
 
 ## 🧮 Test via curl
 
 ```bash
-  curl -X POST http://localhost:8080/ws \
+curl -X POST http://localhost:8080/ws \
      -H "Content-Type: text/xml" \
      -d @getEmployee.xml
 ```
 
 ---
 
-## ⚙️ Common Maven Fix Commands
-
-If you face duplicate or missing dependency errors:
-
-```bash
-# Clean build artifacts
-mvn clean
-
-# Force dependency resolution
-mvn dependency:purge-local-repository
-
-# Verify dependency tree
-mvn dependency:tree
-```
-
-> 🧩 Tip: Ensure only one `spring-boot-starter-web-services` dependency exists in your `pom.xml`.
-
----
-
-## 🧠 Appian Integration Guide
+## 🧠 Appian Integration
 
 1. In Appian → **Connected Systems → Web Service**
 2. Import WSDL:
    `http://<your-server>:8080/ws/employees.wsdl`
 3. Appian auto-creates smart services for each SOAP operation.
-4. Map request & response to process variables.
+4. Map the request & response data models.
 
 ---
 
 ## 🪶 File Storage
 
-All uploaded files are saved in the directory:
+Files are stored under:
 
 ```
 ./filestore
 ```
 
-File naming pattern:
-
-```
-<employeeId>_<originalFileName>
-```
+Naming pattern:
+`<employeeId>_<originalFileName>`
 
 ---
 
 ## 🧩 Troubleshooting
 
-| Issue                            | Fix                                                               |
-| -------------------------------- | ----------------------------------------------------------------- |
-| ❌ `javax.servlet does not exist` | Add `javax.servlet-api` dependency with `<scope>provided</scope>` |
-| 🔁 Duplicate dependency warning  | Remove duplicate `spring-boot-starter-web-services` entry         |
-| ⚠️ Port 8080 in use              | Edit `server.port` in `application.properties`                    |
-| 📄 WSDL 404 error                | Ensure `/ws/employees.wsdl` exists and app is running             |
-| 🧱 File upload failure           | Verify folder permissions for `./filestore`                       |
+| Issue                            | Fix                                                       |
+| -------------------------------- | --------------------------------------------------------- |
+| ❌ `javax.servlet does not exist` | Add `javax.servlet-api` dependency (scope: provided)      |
+| 🔁 Duplicate dependency warning  | Remove duplicate `spring-boot-starter-web-services` entry |
+| ⚠️ Port 8080 busy                | Change `server.port`                                      |
+| 📄 WSDL not found                | Verify `/ws/employees.wsdl` and ensure app is running     |
+| 🧱 Upload failure                | Check permissions for `./filestore`                       |
 
 ---
 
-## 💡 Future Enhancements
+## 🧭 Future Roadmap
 
-* 🗄 Integrate with MySQL or PostgreSQL
-* 🔒 Add WS-Security authentication
-* 🧾 Generate Swagger-like docs for SOAP
-* 📜 Include structured XML logging & audit trail
+| Phase       | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| **Phase 2** | Integrate MySQL/PostgreSQL using Spring Data JPA      |
+| **Phase 3** | Add structured XML logging and exception handling     |
+| **Phase 4** | Add WS-Security and Basic Auth                        |
+| **Phase 5** | Dockerize the service and add CI/CD pipeline          |
+| **Phase 6** | Build REST wrapper over SOAP for hybrid APIs          |
+| **Phase 7** | Connect to Appian via plug-ins or integration objects |
 
 ---
 
-## 🧑‍💻 Author
+## ⚙️ Common Git Commands
 
-**Buddy (a.k.a. Daisy)**
-📘 *Lead Appian Consultant | Java & AI Innovator*
+| Action        | Command                                                 |
+| ------------- | ------------------------------------------------------- |
+| Clone repo    | `git clone <repo_url>`                                  |
+| Pull latest   | `git pull origin main --rebase`                         |
+| Stage changes | `git add .`                                             |
+| Commit        | `git commit -m "Updated Employee service"`              |
+| Push          | `git push origin main`                                  |
+| Fix conflicts | `git merge --abort` → resolve → `git rebase --continue` |
+| Tag           | `git tag v1.0` & `git push origin v1.0`                 |
+
+---
+
+## 💡 Author
+
+**Buddy (a.k.a Daisy Singh)**
+💼 *Lead Appian Consultant | Appian & AI Innovator*
 💬 *"Code lean, integrate clean."*
+🌐 [GitHub: DSniper](https://github.com/DSniper)
 
+---
+
+## ⚖️ License
+
+🪪 **Custom Restricted License**
+
+This project is open for:
+
+* ✅ Personal & educational use
+* ✅ Contributions (PRs welcome)
+* ❌ Commercial usage without permission
+
+For commercial licensing or integrations, you can contact the author directly.
 
