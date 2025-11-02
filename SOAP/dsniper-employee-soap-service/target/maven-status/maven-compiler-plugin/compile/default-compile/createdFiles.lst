@@ -1,0 +1,4 @@
+com\dsniper\employee\service\service\EmployeeService.class
+com\dsniper\employee\service\EmployeeSoapServiceApplication.class
+com\dsniper\employee\service\config\WebServiceConfig.class
+com\dsniper\employee\service\model\Employee.class

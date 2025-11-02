@@ -1,0 +1,50 @@
+#version: "3.9"
+# taskkill /PID 27736
+#netstat -ano | findstr :8080
+services:
+  dsniper-employee-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dsniper-employee-soap
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+    networks:
+      - soap_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ws/employees.wsdl"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: dsniper-ngrok
+    depends_on:
+      dsniper-employee-service:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - soap_net
+    ports:
+      - "4040:4040"   # Ngrok web inspector
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        cat <<EOF > /tmp/ngrok.yml
+        version: 2
+        tunnels:
+          soap:
+            proto: http
+            addr: dsniper-employee-soap:8080
+            domain: https://harmless-informally-ostrich.ngrok-free.app/
+        EOF
+        ngrok start --all --config /tmp/ngrok.yml --authtoken 30J3apn36mseSkybEmqwvVj47AA_4NPFEZtZhA43NM2WBox6Z
+
+networks:
+  soap_net:
+    driver: bridge
