@@ -1,15 +1,3 @@
-Perfect,  👏
-README is Now **excellent** — structured, clear, and very usable for both Appian and Java devs.
-Let’s enhance it with:
-✅ Maven cleanup commands
-✅ Proper duplicate dependency note
-✅ Developer build lifecycle (clean → validate → compile → package → install → run)
-✅ Icons & polish for better GitHub appeal
-✅ Troubleshooting for `javax.servlet` fix
-
-
----
-
 ```markdown
 # 🧠 dsniper-employee-soap-service
 
@@ -352,4 +340,5 @@ File naming pattern:
 **Buddy (a.k.a. Daisy)**
 📘 *Lead Appian Consultant | Java & AI Innovator*
 💬 *"Code lean, integrate clean."*
+
 
