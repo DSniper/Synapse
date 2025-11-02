@@ -1,17 +1,3 @@
-Perfect, Buddy 👑
-
-You’ve already got an **excellent, production-grade README skeleton** — it’s clear, modern, and developer-friendly.
-Let’s now **merge your README with the previous structured roadmap version** so you get:
-
-* ✅ Professional project intro & purpose (your version)
-* ✅ Future roadmap and DB integration plan (my version)
-* ✅ Clean structure and commands
-* ✅ Added long-term goals (security, CI/CD, and Appian focus)
-
-Here’s the **final, polished README.md** for your repo:
-
----
-
 ```markdown
 # 🧠 Synapse: Employee SOAP Service
 
@@ -40,22 +26,21 @@ It’s built to help **developers**, **Appian consultants**, and **integration e
 
 ## 🗂 Project Structure
 
-```
-
 Synapse/
-├── pom.xml
+│── pom.xml
+│
 ├── src/main/java/com/dsniper/employee/service/
-│   ├── EmployeeSoapServiceApplication.java
-│   ├── config/WebServiceConfig.java
-│   ├── endpoint/EmployeeEndpoint.java
-│   ├── model/Employee.java
-│   ├── service/EmployeeService.java
+│   │── EmployeeSoapServiceApplication.java
+│   │── config/WebServiceConfig.java
+│   │── endpoint/EmployeeEndpoint.java
+│   │── model/Employee.java
+│   │── service/EmployeeService.java
 │   └── util/Base64Util.java
-└── src/main/resources/
-├── application.properties
-└── employee.xsd
+│
+├── src/main/resources/
+│   │── application.properties
+│   └── employee.xsd
 
-````
 
 ---
 
@@ -329,7 +314,7 @@ Naming pattern:
 ## 💡 Author
 
 **Buddy (a.k.a Daisy Singh)**
-💼 *Lead Appian Consultant | Appian & AI Innovator*
+💼 *Lead Consultant | Appian & AI Innovator*
 💬 *"Code lean, integrate clean."*
 🌐 [GitHub: DSniper](https://github.com/DSniper)
 
@@ -347,3 +332,6 @@ This project is open for:
 
 For commercial licensing or integrations, you can contact the author directly.
 
+---
+
+```
